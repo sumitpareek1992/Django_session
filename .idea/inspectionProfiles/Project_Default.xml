@@ -1,0 +1,71 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="58">
+            <item index="0" class="java.lang.String" itemvalue="pytest-astropy" />
+            <item index="1" class="java.lang.String" itemvalue="sphinxcontrib-applehelp" />
+            <item index="2" class="java.lang.String" itemvalue="typed-ast" />
+            <item index="3" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="4" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="5" class="java.lang.String" itemvalue="mkl-random" />
+            <item index="6" class="java.lang.String" itemvalue="pytest-arraydiff" />
+            <item index="7" class="java.lang.String" itemvalue="snowballstemmer" />
+            <item index="8" class="java.lang.String" itemvalue="tables" />
+            <item index="9" class="java.lang.String" itemvalue="sphinxcontrib-qthelp" />
+            <item index="10" class="java.lang.String" itemvalue="xlrd" />
+            <item index="11" class="java.lang.String" itemvalue="clyent" />
+            <item index="12" class="java.lang.String" itemvalue="pytest-astropy-header" />
+            <item index="13" class="java.lang.String" itemvalue="pyodbc" />
+            <item index="14" class="java.lang.String" itemvalue="anaconda-project" />
+            <item index="15" class="java.lang.String" itemvalue="wrapt" />
+            <item index="16" class="java.lang.String" itemvalue="zope.interface" />
+            <item index="17" class="java.lang.String" itemvalue="QDarkStyle" />
+            <item index="18" class="java.lang.String" itemvalue="sphinxcontrib-htmlhelp" />
+            <item index="19" class="java.lang.String" itemvalue="pytest-openfiles" />
+            <item index="20" class="java.lang.String" itemvalue="SecretStorage" />
+            <item index="21" class="java.lang.String" itemvalue="pyxdg" />
+            <item index="22" class="java.lang.String" itemvalue="anaconda-client" />
+            <item index="23" class="java.lang.String" itemvalue="PySocks" />
+            <item index="24" class="java.lang.String" itemvalue="pytest-remotedata" />
+            <item index="25" class="java.lang.String" itemvalue="mkl-service" />
+            <item index="26" class="java.lang.String" itemvalue="scikit-image" />
+            <item index="27" class="java.lang.String" itemvalue="Bottleneck" />
+            <item index="28" class="java.lang.String" itemvalue="brotlipy" />
+            <item index="29" class="java.lang.String" itemvalue="pycurl" />
+            <item index="30" class="java.lang.String" itemvalue="rope" />
+            <item index="31" class="java.lang.String" itemvalue="tblib" />
+            <item index="32" class="java.lang.String" itemvalue="Rtree" />
+            <item index="33" class="java.lang.String" itemvalue="pycosat" />
+            <item index="34" class="java.lang.String" itemvalue="llvmlite" />
+            <item index="35" class="java.lang.String" itemvalue="simplegeneric" />
+            <item index="36" class="java.lang.String" itemvalue="sphinxcontrib-devhelp" />
+            <item index="37" class="java.lang.String" itemvalue="mkl-fft" />
+            <item index="38" class="java.lang.String" itemvalue="XlsxWriter" />
+            <item index="39" class="java.lang.String" itemvalue="seaborn" />
+            <item index="40" class="java.lang.String" itemvalue="PyWavelets" />
+            <item index="41" class="java.lang.String" itemvalue="zict" />
+            <item index="42" class="java.lang.String" itemvalue="QtAwesome" />
+            <item index="43" class="java.lang.String" itemvalue="zope.event" />
+            <item index="44" class="java.lang.String" itemvalue="sortedcollections" />
+            <item index="45" class="java.lang.String" itemvalue="pytest" />
+            <item index="46" class="java.lang.String" itemvalue="pytest-doctestplus" />
+            <item index="47" class="java.lang.String" itemvalue="sphinxcontrib-serializinghtml" />
+            <item index="48" class="java.lang.String" itemvalue="xlwt" />
+            <item index="49" class="java.lang.String" itemvalue="singledispatch" />
+            <item index="50" class="java.lang.String" itemvalue="sortedcontainers" />
+            <item index="51" class="java.lang.String" itemvalue="ruamel-yaml" />
+            <item index="52" class="java.lang.String" itemvalue="sphinxcontrib-jsmath" />
+            <item index="53" class="java.lang.String" itemvalue="statsmodels" />
+            <item index="54" class="java.lang.String" itemvalue="isort" />
+            <item index="55" class="java.lang.String" itemvalue="gmpy2" />
+            <item index="56" class="java.lang.String" itemvalue="unicodecsv" />
+            <item index="57" class="java.lang.String" itemvalue="ujson" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
