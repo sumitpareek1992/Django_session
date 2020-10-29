@@ -13,8 +13,8 @@ class Students(models.Model):
     s_id = models.IntegerField(default=1)
     name = models.CharField(max_length=15)
     age = models.IntegerField()
-    department_name = models.CharField(max_length=10)
     email = models.EmailField(max_length=30 ,default="")
+    d_name = models.ForeignKey(Department, on_delete=models.CASCADE, related_name="Department")
 
     def __str__(self):
         return self.name

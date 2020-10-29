@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from main.forms import DepatmentForm, StudentForm
-from main.models import Students
+from main.models import Students, Department
 
 
 # Create your views here.
+def home_view(request):
 
+    return render(request, 'home.html')
 
 def index(request):
     info = Students.objects.all()
@@ -35,3 +37,6 @@ def student_view(request):
     form = StudentForm()
     return render(request, "student.html",
                   {"form": form, "msg": msg})
+def department_list(request):
+    lst = Department.objects.all()
+    return render(request, 'department_list.html', {"lst":lst})

@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+<nav class="navbar navbar-default navbar-stati  c-top">
+    <div class="container">
+    <li><a class="navbar-brand" href="{% url 'index' %}">Home</a></li>
+    </div>
+</nav>
+<h1>Update Student Information</h1>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p}}
+		<input type="submit" name="" value="Update Information">
+	</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'index.html'%}
+{% block content %}
+<div class="container">
+
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Department Name</th>
+            <th scope="col">H.O.D.</th>
+            <th scope="col">Description</th>
+            <th scope="col">Operations</th>
+
+
+        </tr>
+        </thead>
+        {% for obj in lst %}
+        <tbody>
+        <tr>
+            <td>{{obj.name}}</td>
+            <td>{{obj.hod}}</td>
+            <td>{{obj.dec}}</td>
+            <td>
+                <a href="/d_update/{{ obj.id }}">UPDATE |</a>
+                 <a href="/d_delete/{{ obj.id }}">DELETE </a>
+            </td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
