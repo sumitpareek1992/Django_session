@@ -15,24 +15,28 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from main.views import index, department_view, student_view, home_view,department_list
+from main.views import index, department_view, student_view,department_list
 from django.views.generic import UpdateView, DeleteView, ListView
 from main.models import Students, Department
+from account.views import home_view, register_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path("", home_view, name='home'),
+    path("register/", register_view, name='register'),
+    path("logout/", logout_view, name='logout'),
+    path('s_view', index, name='s_view'),
     path('department/', department_view, name='department'),
     path('student/', student_view, name='student'),
     re_path('s_update/(?P<pk>[0-9]+)', UpdateView.as_view(
         model= Students,
         fields="__all__",
-        success_url= "/",
+        success_url= "s_view",
         template_name="students_update_form.html"
     )),
     re_path("s_delete/(?P<pk>[0-9]+)",DeleteView.as_view(
         model=Students,
-        success_url="/",
+        success_url="s_view",
         template_name="student_confirm_delete.html"
     )),
     path('d_list/', department_list, name='d_list'),

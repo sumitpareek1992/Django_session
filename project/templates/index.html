@@ -19,7 +19,9 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-
+            {% if user.is_authenticate %}
+            <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>
+            {% endif %}
             <li><a href="{% url 'student' %}"><span class="glyphicon glyphicon-user"></span> Add Student</a></li>
             {% if user.is_superuser %}
             <li><a href="{% url 'department' %}"><span class="glyphicon glyphicon-user"></span> Add Department</a></li>

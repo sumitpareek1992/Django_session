@@ -1,16 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from main.forms import DepatmentForm, StudentForm
 from main.models import Students, Department
 
 
 # Create your views here.
-def home_view(request):
-
-    return render(request, 'home.html')
 
 def index(request):
     info = Students.objects.all()
-    print(info)
+    one = Students.objects.all().first()
+    two =  Students.objects.get(s_id=2)
+    three = Students.objects.filter(name="ravi")
+    for i in three:
+        print(i)
+    print(three)
     return render(request,"index.html", {"info":info})
 
 def department_view(request):
@@ -32,6 +34,7 @@ def student_view(request):
         if form.is_valid():
             form.save()
             msg = "student saved successfully"
+            return redirect('s_view')
         else:
             msg = form._errors
     form = StudentForm()

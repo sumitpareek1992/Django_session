@@ -1,0 +1,45 @@
+{% extends "home.html" %}
+{% block content %}
+
+  <style type="text/css">
+ .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;}
+ .h3{
+    text-align: center;
+  }
+
+
+
+</style>
+
+  <div class="container">
+    <div class="jumbotron">
+
+
+
+<form enctype="multipart/form-data" method="POST" class="form-signin">
+    <h2 class="h3 mb-3 font-weight-normal">Register Here</h2>
+          {% csrf_token %}
+     <input type="text" name="username" class="form-control" placeholder="Username" required="true">
+      <input name="password"class="form-control" placeholder="Password" type="password" required="true">
+    <input name="email"class="form-control" placeholder="Email" type="text" required="true"><br>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+
+
+    </div>
+  </div>
+{% endblock %}
