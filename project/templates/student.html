@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Students</h1>
 <h4>{{ msg }}</h4>
-<form method="post">
+<form method="post"enctype="multipart">
 	{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" name="">

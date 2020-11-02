@@ -31,11 +31,13 @@
 
 
 <form enctype="multipart/form-data" method="POST" class="form-signin">
+    {{msg}}
     <h2 class="h3 mb-3 font-weight-normal">Register Here</h2>
           {% csrf_token %}
      <input type="text" name="username" class="form-control" placeholder="Username" required="true">
       <input name="password"class="form-control" placeholder="Password" type="password" required="true">
     <input name="email"class="form-control" placeholder="Email" type="text" required="true"><br>
+
           <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
         </form>
 

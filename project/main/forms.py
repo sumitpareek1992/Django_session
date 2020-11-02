@@ -10,4 +10,5 @@ class DepatmentForm(forms.ModelForm):
 class StudentForm(forms.ModelForm):
     class Meta():
         model = Students
-        fields = "__all__"
+        fields = ['s_id', 'name', 'email', 'd_name', 'age', 'image']
+

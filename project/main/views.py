@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from main.forms import DepatmentForm, StudentForm
 from main.models import Students, Department
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
-
-def index(request):
+@login_required
+def s_view(request):
     info = Students.objects.all()
     one = Students.objects.all().first()
     two =  Students.objects.get(s_id=2)
@@ -27,6 +28,7 @@ def department_view(request):
     form = DepatmentForm()
     return render(request, "department.html",
                   {"form": form, "msg": msg})
+
 def student_view(request):
     msg = ""
     if request.method == "POST":
@@ -40,6 +42,7 @@ def student_view(request):
     form = StudentForm()
     return render(request, "student.html",
                   {"form": form, "msg": msg})
+
 def department_list(request):
     lst = Department.objects.all()
     return render(request, 'department_list.html', {"lst":lst})

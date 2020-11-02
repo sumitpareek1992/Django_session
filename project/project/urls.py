@@ -15,17 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from main.views import index, department_view, student_view,department_list
+from main.views import s_view, department_view, student_view,department_list
 from django.views.generic import UpdateView, DeleteView, ListView
 from main.models import Students, Department
-from account.views import home_view, register_view, logout_view
+from account.views import home_view, register_view, logout_view, login_view
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home_view, name='home'),
     path("register/", register_view, name='register'),
+    path("login/", login_view, name='login'),
     path("logout/", logout_view, name='logout'),
-    path('s_view', index, name='s_view'),
+    path('s_view', s_view, name='s_view'),
     path('department/', department_view, name='department'),
     path('student/', student_view, name='student'),
     re_path('s_update/(?P<pk>[0-9]+)', UpdateView.as_view(
@@ -52,3 +55,5 @@ urlpatterns = [
         template_name="department_confirm_delete.html"
     )),
 ]
+if settings.DEBUG:
+   urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
